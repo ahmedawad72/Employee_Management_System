@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="954.0" style="-fx-background-color: #008B8B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectds.FXMLDocumentController">
+   <children>
+      <Button fx:id="binarysearch" layoutX="366.0" layoutY="29.0" mnemonicParsing="false" onAction="#BinarySearch" prefHeight="37.0" prefWidth="123.0" text="binary search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="linear" layoutX="552.0" layoutY="29.0" mnemonicParsing="false" onAction="#LinearSearch" prefHeight="37.0" prefWidth="132.0" text="linear search ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="linbutton" alignment="TOP_CENTER" layoutY="14.0" prefHeight="105.0" prefWidth="345.0" text="Employee  management&#10;             system">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="369.0" layoutY="139.0" prefHeight="371.0" prefWidth="497.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="name" prefWidth="97.0" text="Name" />
+            <TableColumn fx:id="department" prefWidth="141.0" text="Department " />
+            <TableColumn fx:id="salary" prefWidth="90.0" text="Salary" />
+            <TableColumn fx:id="dob" prefWidth="92.0" text="DOB" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="arrbutton" layoutX="47.0" layoutY="139.0" mnemonicParsing="false" onAction="#bool" prefHeight="17.0" prefWidth="74.0" text="Array">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="datastructure" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="linkbutton" layoutX="49.0" layoutY="181.0" mnemonicParsing="false" onAction="#booll" text="LinkedList" toggleGroup="$datastructure">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="add" layoutX="369.0" layoutY="85.0" mnemonicParsing="false" onAction="#addemployee" text="Add Employee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete" layoutX="552.0" layoutY="85.0" mnemonicParsing="false" onAction="#delete" text="Delete Employee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="textbox" layoutX="725.0" layoutY="29.0" prefHeight="37.0" prefWidth="192.0" promptText="Enter Name" />
+      <Button fx:id="load" layoutX="844.0" layoutY="82.0" mnemonicParsing="false" onAction="#loading" prefHeight="37.0" prefWidth="66.0" text="Load">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="mychoice" layoutX="199.0" layoutY="301.0" onDragDetected="#getSort" prefWidth="150.0" style="-fx-background-color: white;" />
+      <Label alignment="CENTER" layoutX="199.0" layoutY="274.0" prefHeight="27.0" prefWidth="150.0" text="Sorting By Name" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="mychoice2" layoutX="17.0" layoutY="301.0" prefWidth="150.0" style="-fx-background-color: white;" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="274.0" prefHeight="27.0" prefWidth="150.0" text="Sorting By ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="733.0" layoutY="82.0" mnemonicParsing="false" onAction="#saveData" prefHeight="37.0" prefWidth="66.0" text="Save" />
+   </children>
+</AnchorPane>
